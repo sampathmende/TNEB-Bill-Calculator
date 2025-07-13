@@ -1,0 +1,120 @@
+
+### 2. index.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your TNEB electricity bill with our free online calculator. Based on latest Tamil Nadu Electricity Board tariff rates effective July 2024.">
+    <meta name="keywords" content="TNEB, Tamil Nadu Electricity Board, bill calculator, electricity bill, tariff rates">
+    <meta name="author" content="Unified Pension Schemes">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="TNEB Bill Calculator - Calculate Your Electricity Bill">
+    <meta property="og:description" content="Free online TNEB bill calculator based on latest tariff rates. Calculate your Tamil Nadu electricity bill instantly.">
+    <meta property="og:url" content="https://unifiedpensionschemes.com/tneb-bill-calculator/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://unifiedpensionschemes.com/tneb-bill-calculator/assets/screenshots/calculator-preview.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TNEB Bill Calculator">
+    <meta name="twitter:description" content="Calculate your Tamil Nadu electricity bill with our free online calculator.">
+    <meta name="twitter:image" content="https://unifiedpensionschemes.com/tneb-bill-calculator/assets/screenshots/calculator-preview.png">
+    
+    <title>TNEB Bill Calculator - Calculate Your Tamil Nadu Electricity Bill</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "TNEB Bill Calculator",
+      "description": "Calculate your Tamil Nadu Electricity Board (TNEB) bill based on current tariff rates",
+      "url": "https://unifiedpensionschemes.com/tneb-bill-calculator/",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="tneb-calc-wrapper">
+        <div class="calc-header">
+            <h1>⚡ TNEB Bill Calculator</h1>
+            <p>Calculate your electricity bill as per revised tariff (01.07.2024) <span class="calc-badge">NEW</span></p>
+        </div>
+
+        <div class="calc-main">
+            <div class="calc-container">
+                <div class="calc-form">
+                    <input type="text" id="calcDisplay" class="calc-display" readonly placeholder="Enter units consumed" aria-label="Units consumed input">
+                    
+                    <div class="calc-buttons" role="grid" aria-label="Calculator buttons">
+                        <button class="calc-btn calc-btn-number" onclick="addDigit('1')" aria-label="1">1</button>
+                        <button class="calc-btn calc-btn-number" onclick="addDigit('2')" aria-label="2">2</button>
+                        <button class="calc-btn calc-btn-number" onclick="addDigit('3')" aria-label="3">3</button>
+                        
+                        <button class="calc-btn calc-btn-number" onclick="addDigit('4')" aria-label="4">4</button>
+                        <button class="calc-btn calc-btn-number" onclick="addDigit('5')" aria-label="5">5</button>
+                        <button class="calc-btn calc-btn-number" onclick="addDigit('6')" aria-label="6">6</button>
+                        
+                        <button class="calc-btn calc-btn-number" onclick="addDigit('7')" aria-label="7">7</button>
+                        <button class="calc-btn calc-btn-number" onclick="addDigit('8')" aria-label="8">8</button>
+                        <button class="calc-btn calc-btn-number" onclick="addDigit('9')" aria-label="9">9</button>
+                        
+                        <button class="calc-btn calc-btn-number" onclick="addDigit('.')" aria-label="Decimal point">.</button>
+                        <button class="calc-btn calc-btn-number" onclick="addDigit('0')" aria-label="0">0</button>
+                        <button class="calc-btn calc-btn-clear" onclick="clearCalc()" aria-label="Clear">⌫</button>
+                    </div>
+                    
+                    <button class="calc-btn-calculate" onclick="calculateTNEB()" aria-label="Calculate bill">
+                        ⚡ Calculate Bill
+                    </button>
+                </div>
+
+                <div class="calc-info">
+                    <strong>How to use:</strong> Enter the number of units consumed and click "Calculate Bill" to see your TNEB electricity bill breakdown with current tariff rates.
+                </div>
+            </div>
+
+            <div class="calc-results">
+                <div id="calcResults" aria-live="polite" aria-label="Calculation results"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="calc-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 <a href="https://unifiedpensionschemes.com" target="_blank">Unified Pension Schemes</a>. All rights reserved.</p>
+            <p>TNEB tariff rates effective from July 1, 2024. For official rates, visit <a href="https://www.tneb.in" target="_blank" rel="noopener">TNEB Official Website</a>.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/calculator.js"></script>
+    
+    <!-- Google Analytics (Optional - Replace with your tracking ID) -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_TRACKING_ID');
+    </script>
+    -->
+</body>
+</html>
